@@ -5,7 +5,6 @@
 2. **Static IPs** assigned to each VM.
 3. **/etc/hosts** updated with hostname → IP mappings for all nodes.
 4. **Swap disabled** on all nodes.
-5. **Take VM snapshots** before installing Kubernetes (recommended).
 
 SSH into control plane:
 ```bash
