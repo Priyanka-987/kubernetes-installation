@@ -61,6 +61,7 @@ grep 'SystemdCgroup = true' /etc/containerd/config.toml
 Restart:
 ```bash
 sudo systemctl restart containerd
+sudo systemctl enable containerd
 ```
 
 ---
