@@ -185,9 +185,8 @@ kubectl get nodes
 
 Watch pods across all namespaces:
 ```bash
-kubectl get pods --all-namespaces
+kubectl get pods --all-namespaces --watch
 ```
-![Screenshot Name](images/pod.jpg)
 
 Verify worker node becomes **Ready**:
 ```bash
