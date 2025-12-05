@@ -193,3 +193,4 @@ Verify worker node becomes **Ready**:
 ```bash
 kubectl get nodes
 ```
+![Screenshot Name](images/nodes.jpg)
