@@ -119,10 +119,6 @@ Initialize the cluster:
 ```bash
 sudo kubeadm init --kubernetes-version v1.31.14
 ```
-*Remove the version flag to use the latest:*
-```bash
-# sudo kubeadm init
-```
 
 Set up kubeconfig:
 ```bash
