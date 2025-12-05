@@ -191,4 +191,5 @@ kubectl get pods --all-namespaces --watch
 
 Verify worker node becomes **Ready**:
 ```bash
-kube
+kubectl get nodes
+```
