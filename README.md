@@ -11,7 +11,7 @@ SSH into control plane:
 ssh priyanka@my-ubuntu-1
 ```
 ---
-Number 0 to Number 4 need to be applied on control plane and works)
+Number 0 to Number 4 need to be applied on control plane and workers
 
 ---
 ## 0. Disable Swap
