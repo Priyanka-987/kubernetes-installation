@@ -10,6 +10,8 @@ SSH into control plane:
 ```bash
 ssh priyanka@my-ubuntu-1
 ```
+---
+Number 0 to Number 4 need to be applied on control plane and works)
 
 ---
 ## 0. Disable Swap
@@ -20,7 +22,7 @@ sudo vi /etc/fstab
 *Remove any swap entries.*
 
 ---
-## 1. Install Required Packages (Both Control plane and Worker) 
+## 1. Install Required Packages
 Load kernel modules:
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
