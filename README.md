@@ -205,9 +205,9 @@ ssh priyanka@my-ubuntu-2
 
 Run the join command (example — your token will differ):
 ```bash
-sudo kubeadm join 172.16.94.10:6443 \
-  --token th8kxn.wprtltponkh1d6s0 \
-  --discovery-token-ca-cert-hash sha256:41e98ba1e95281e53dfd65935dee7073ee3ef227f3250f4257f97663a19473bd
+sudo kubeadm join <CONTROL_PLANE_IP>:6443 \
+  --token <TOKEN> \
+  --discovery-token-ca-cert-hash sha256:<HASH>
 ```
 
 Return to control plane:
@@ -259,3 +259,7 @@ Re-applied Calico manifest and verified pod status.
 - Familiarity with containerd runtime configuration.
 - Improved troubleshooting skills for node and networking issues.
 - Better understanding of Kubernetes networking using Calico.
+
+## Project Outcome
+
+Successfully deployed a Kubernetes cluster using kubeadm and containerd with Calico networking. Verified node readiness, system pod health, and cluster networking functionality.
