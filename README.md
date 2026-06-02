@@ -1,4 +1,4 @@
-# # Kubernetes Cluster Installation Lab
+# Kubernetes Cluster Installation Lab
 
 ## Objective
 Deploy a Kubernetes cluster using kubeadm, containerd, and Calico.
