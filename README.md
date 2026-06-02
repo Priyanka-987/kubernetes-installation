@@ -1,4 +1,38 @@
-# Kubernetes Installation Guide
+# # Kubernetes Cluster Installation Lab
+
+## Objective
+Deploy a Kubernetes cluster using kubeadm, containerd, and Calico.
+
+## Environment
+- Ubuntu
+- Kubernetes
+- Containerd
+- Calico
+
+## Architecture
+
+                +----------------+
+                |  Control Plane |
+                | kube-apiserver |
+                | etcd           |
+                | scheduler      |
+                +--------+-------+
+                         |
+           ----------------------------
+           |                          |
+    +------+-------+          +------+-------+
+    | Worker Node1 |          | Worker Node2 |
+    | kubelet      |          | kubelet      |
+    | containerd   |          | containerd   |
+    +------+-------+          +------+-------+
+           |                          |
+           +------------+-------------+
+                        |
+                 +------+------+
+                 |   Calico    |
+                 |   Network   |
+                 +-------------+
+## Installation Steps
 
 ## Setup
 1. **4 VMs Ubuntu 22.04** — 1 control plane, 3 worker nodes.
@@ -181,6 +215,8 @@ Return to control plane:
 exit
 ```
 
+## Validation
+
 Check node status (will be **NotReady** until network pod is deployed):
 ```bash
 kubectl get nodes
@@ -197,3 +233,29 @@ Verify worker node becomes **Ready**:
 kubectl get nodes
 ```
 ![Screenshot Name](images/nodes.jpg)
+
+## Troubleshooting
+
+### Issue 1: Worker Node Not Joining
+
+Cause:
+Firewall ports were blocked.
+
+Resolution:
+Required Kubernetes ports were opened and the join command was executed again.
+
+### Issue 2: Calico Pods Not Starting
+
+Cause:
+Network configuration mismatch.
+
+Resolution:
+Re-applied Calico manifest and verified pod status.
+
+## Lessons Learned
+
+- Understanding of Kubernetes cluster architecture.
+- Experience with kubeadm-based installation.
+- Familiarity with containerd runtime configuration.
+- Improved troubleshooting skills for node and networking issues.
+- Better understanding of Kubernetes networking using Calico.
